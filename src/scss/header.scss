@@ -1,72 +1,122 @@
-.header {
-  padding: 20px 0;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
+.header {
+  background: #2c3e50;
+  padding: 4px 0;
+  color: white;
+}
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 10px 0;
+  }
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 1200px) {
+  .logo-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.nav-desktop {
+  flex: 1 1 auto;
+  min-width: 0; // <--- Це потрібно, щоб не вилазив flex-елемент
+  overflow: hidden;
 }
 
 .nav-list {
+  list-style: none;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-
-  @include media(tablet) {
-    justify-content: flex-start;
-  }
-
-  @include media(desktop) {
-    justify-content: flex-end;
-  }
+  gap: 24px;
 }
 
-.nav-link {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  @include font(30, 40);
-  color: #7c8ba8;
+.nav-list a {
+  color: white;
+  text-decoration: none;
 }
 
-.nav-link:hover,
-.nav-link:focus {
-  color: #7c8ba8;
-}
-
-.burger-btn,
-.btn-close {
-  padding: 0.5em 0.8em;
-  font-size: 1rem;
-  background-color: blueviolet;
+.open-menu-btn {
+  background: none;
   border: none;
-  border-radius: 0.5em;
-  color: #fff;
+  padding: 0;
+  cursor: pointer;
 }
 
-.burger-menu {
-  background-color: lightgreen;
-  display: flex;
-  justify-content: space-between;
-  width: 150px;
-  padding: 8px;
-  position: absolute;
-  top: 0;
-  right: 0;
+.open-menu-btn img,
+.modal-close-btn img {
+  display: block;
+  background: transparent;
 }
 
-.btn-close {
-  align-self: baseline;
-  padding: 4px;
+.order-link {
+  color: white;
+  text-decoration: underline;
+  flex-shrink: 0;
 }
 
-[data-visible='open'] {
-  display: flex;
-}
-
-[data-visible='close'] {
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
   display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+}
+
+.backdrop.is-open {
+  display: flex;
+}
+
+.modal {
+  background: #2c3e50;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+}
+
+.modal-close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navi-modal-wrapper {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.navi-modal-link,
+.modal-order-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  .nav-desktop {
+    display: block;
+  }
+
+  .open-menu-btn,
+  .backdrop {
+    display: none !important;
+  }
 }
