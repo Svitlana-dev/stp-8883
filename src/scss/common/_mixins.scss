@@ -9,7 +9,7 @@ screen types:
     desktop,
 */
 @mixin media($_screen) {
-  @if $_screen == mobile {
+  @if $_screen == 'mobile' {
     @media screen and (min-width: $mobile) {
       @content;
     }
