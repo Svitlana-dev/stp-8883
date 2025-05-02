@@ -1,11 +1,15 @@
-const openBtnEl = document.querySelector('[data-action="open"]');
-const closeBtnEl = document.querySelector('[data-action="close"]');
-const burgerMenuEl = document.querySelector('[data-visible]');
+const openBtn = document.querySelector('.open-menu-btn');
+const closeBtn = document.querySelector('.modal-close-btn');
+const modal = document.getElementById('mobile-menu');
 
-openBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'open';
-});
+if (openBtn && closeBtn && modal) {
+  openBtn.addEventListener('click', () => {
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  });
 
-closeBtnEl.addEventListener('click', e => {
-  burgerMenuEl.dataset.visible = 'close';
-});
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  });
+}
