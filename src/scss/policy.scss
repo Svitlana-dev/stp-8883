@@ -54,6 +54,37 @@
     display: inline;
   }
 }
+.main-wrapper {
+  background: url(/img/blur-vectors/Vector\ 7_mob@1x.png),
+    url(/img/blur-vectors/Vector\ 15_mob@1x.png),
+    url(/img/blur-vectors/Vector\ 8_mob@1x.png),
+    url(/img/blur-vectors/Vector\ 10_mob@1x.png),
+    url(/img/blur-vectors//Vector\ 14_mob@1x.png),
+    url(/img/blur-vectors/Vector\ 9_mob1@1x.png),
+    url(/img/blur-vectors/Vector\ 13_mob@1x.png),
+    url(/img/blur-vectors/Vector\ 11_mob@1x.png);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+    no-repeat, no-repeat, no-repeat;
+
+  background-size: contain, contain, contain, contain, contain, contain, contain,
+    contain;
+  background-position: top 0px left 0px, top 417px left 0px, top 872px left 0px,
+    top 1514px left 0px, top 2246px left 0px, top 2653px left 0px,
+    top 2888px left 0px, bottom 273px left 0px;
+
+  @include media('desktop') {
+    background: url(/img/blur-vectors/Vector\ 4_desk@1x.png),
+      url(/img/blur-vectors/Vector\ 6_desk@1x.png),
+      url(/img/blur-vectors/Vector\ 2_desk@1x.png),
+      url(/img/blur-vectors/Vector\ 5_desk@1x.png);
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+
+    background-size: contain, contain, contain, contain;
+    background-position: top -60px left 0px, top 30% left 0px, top 60% right 0px,
+      bottom 0px left 0;
+  }
+}
 .policy-section.main {
   padding-top: 78px;
   padding-bottom: 20px;
@@ -88,8 +119,6 @@
   }
 }
 .policy-subtitle {
-  background-color: $_main_bg_color;
-
   font-family: 'Alegreya Sans', sans-serif;
   font-weight: 500;
   font-size: 28px;
