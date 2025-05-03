@@ -1,87 +1,59 @@
 <header class="header">
   <div class="container header-container">
     <!-- Logo -->
-    <a href="#" class="header-logo">
-      <picture>
-        <source
-          srcset="
-            img/logo/logo-desktop@1x.jpg 1x,
-            img/logo/logo-desktop@2x.jpg 2x
-          "
-          media="(min-width: 1200px)"
-          type="image/jpeg"
-        />
-        <source
-          srcset="
-            img/logo/logo-mobile@1x.jpg 1x,
-            img/logo/logo-mobile@2x.jpg 2x
-          "
-          media="(max-width: 1199px)"
-          type="image/jpeg"
-        />
-        <img
-          src="img/logo/logo-mobile@1x.jpg"
-          alt="Game logo"
-          class="logo-img"
-          loading="eager"
-        />
-      </picture>
+    <a href="/index.html" class="header-logo">
+      <img src="img/logo/logo-mobile@1x.jpg" alt="Game logo" class="logo-img" />
     </a>
 
-    <!-- Desktop navigation -->
-    <nav class="nav-desktop">
-      <ul class="nav-list">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About the Game</a></li>
-        <li><a href="#">Game Features</a></li>
-        <li><a href="#">How to Play</a></li>
-        <li><a href="#">What Players Say</a></li>
-        <li><a href="#">Frequently Asked Questions</a></li>
-      </ul>
-    </nav>
+    <!-- Navigation for desktop -->
+    <div class="nav-wrapper">
+      <nav class="nav-desktop">
+        <ul class="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About the Game</a></li>
+          <li><a href="#">Game Features</a></li>
+          <li><a href="#">How to Play</a></li>
+          <li><a href="#">What Players Say</a></li>
+          <li><a href="#">Frequently Asked Questions</a></li>
+        </ul>
+      </nav>
 
-    <!-- Burger button for mobile -->
-    <button
-      class="open-menu-btn"
-      type="button"
-      aria-label="Open menu button"
-      aria-controls="mobile-menu"
-    >
-      <img
-        src="img/header/open-mobile@1x.png"
-        srcset="
-          img/header/open-mobile@1x.png 1x,
-          img/header/open-mobile@2x.png 2x
-        "
-        alt="Open menu icon"
-        width="28"
-        height="28"
-      />
-    </button>
+      <!-- Mobile buttons -->
+      <div class="menu-toggle-wrapper">
+        <button
+          class="open-menu-btn"
+          type="button"
+          aria-label="Open menu button"
+        >
+          <svg class="burger-menu" width="40" height="40">
+            <use href="img/sprite.svg#menu"></use>
+          </svg>
+        </button>
+        <button class="modal-close-btn" type="button" aria-label="Close menu">
+          <svg class="close-menu" width="40" height="40">
+            <use href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </header>
 
 <!-- Mobile modal menu -->
 <div class="backdrop" id="mobile-menu">
   <div class="modal">
-    <button class="modal-close-btn" type="button" aria-label="Close menu">
-      <img
-        src="img/header/close-mobile@1x.png"
-        srcset="
-          img/header/close-mobile@1x.png 1x,
-          img/header/close-mobile@2x.png 2x
-        "
-        alt="Close menu icon"
-        width="28"
-        height="28"
-      />
-    </button>
     <nav class="navi-modal">
-      <ul class="navi-modal-wrapper">
-        <li><a class="navi-modal-link" href="#aboutme">About me</a></li>
-        <li><a class="navi-modal-link" href="#benefits">Benefits</a></li>
-        <li><a class="navi-modal-link" href="#projects">Projects</a></li>
-        <li><a class="navi-modal-link" href="#faq">FAQ</a></li>
+      <ul class="navi-modal-list">
+        <li><a class="navi-modal-link" href="#home">Home</a></li>
+        <li><a class="navi-modal-link" href="#about">About the Game</a></li>
+        <li><a class="navi-modal-link" href="#features">Game Features</a></li>
+        <li><a class="navi-modal-link" href="#howtoplay">How to Play</a></li>
+        <li><a class="navi-modal-link" href="#reviews">What Players Say</a></li>
+        <li>
+          <a class="navi-modal-link" href="#questions"
+            >Frequently Asked Questions</a
+          >
+        </li>
       </ul>
     </nav>
   </div>
