@@ -1,5 +1,8 @@
-/* ---------------------- HEADER ---------------------- */
-.header {
+html {
+  scroll-behavior: smooth;
+}
+
+[data-header] {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -58,8 +61,8 @@
   align-items: center;
 }
 
-.open-menu-btn,
-.modal-close-btn {
+[data-open-menu],
+[data-close-menu] {
   background: none;
   border: none;
   padding: 0;
@@ -75,42 +78,56 @@
   }
 }
 
-/* States for menu buttons */
-.header.menu-open .open-menu-btn {
+[data-header][data-menu='open'] [data-open-menu] {
   display: none;
 }
 
-.modal-close-btn {
+[data-header][data-menu='close'] [data-close-menu],
+[data-header]:not([data-menu='open']) [data-close-menu] {
   display: none;
 }
 
-.header.menu-close .modal-close-btn {
-  display: none;
-}
-
-.header.menu-open .modal-close-btn {
+[data-header][data-menu='open'] [data-close-menu] {
   display: flex;
 }
 
 /* ---------------------- MODAL BACKDROP ---------------------- */
-.backdrop {
-  display: none;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: 999;
+[data-mobile-menu] {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 300ms ease, visibility 300ms ease;
 }
 
-.backdrop.is-open {
-  display: flex;
+[data-mobile-menu][data-visible='open'] {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+[data-mobile-menu][data-visible='open'] .modal {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* ---------------------- MODAL CONTENT ---------------------- */
 .modal {
-  margin-top: -1px;
   width: 100%;
-  height: 383px;
+  height: 433px;
+  max-height: 100vh;
+  overflow-y: auto;
   background: rgba(60, 85, 120, 0.9);
   padding: 18px 16px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.modal.closing {
+  transform: translateY(-20px);
+  opacity: 0;
 }
 
 /* ---------------------- MODAL NAVIGATION ---------------------- */
@@ -121,9 +138,10 @@
   gap: 20px;
   text-align: right;
   width: 156px;
+  padding-top: 50px;
 }
 
-.navi-modal-link:active {
+.navi-modal-link:focus {
   color: $_accent_color;
   transition: color 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
