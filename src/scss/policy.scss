@@ -55,14 +55,14 @@
   }
 }
 .main-wrapper {
-  background: url(../img/blur-vectors/Vector\ 7_mob@1x.png),
-    url(../img/blur-vectors/Vector\ 15_mob@1x.png),
-    url(../img/blur-vectors/Vector\ 8_mob@1x.png),
-    url(../img/blur-vectors/Vector\ 10_mob@1x.png),
-    url(../img/blur-vectors//Vector\ 14_mob@1x.png),
-    url(../img/blur-vectors/Vector\ 9_mob1@1x.png),
-    url(../img/blur-vectors/Vector\ 13_mob@1x.png),
-    url(../img/blur-vectors/Vector\ 11_mob@1x.png);
+  background: url(../img/blur-vectors/Vector7_mob@1x.png),
+    url(../img/blur-vectors/Vector15_mob@1x.png),
+    url(../img/blur-vectors/Vector8_mob@1x.png),
+    url(../img/blur-vectors/Vector10_mob@1x.png),
+    url(../img/blur-vectors//Vector14_mob@1x.png),
+    url(../img/blur-vectors/Vector9_mob1@1x.png),
+    url(../img/blur-vectors/Vector13_mob@1x.png),
+    url(../img/blur-vectors/Vector11_mob@1x.png);
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
     no-repeat, no-repeat, no-repeat;
 
@@ -73,10 +73,10 @@
     top 2888px left 0px, bottom 273px left 0px;
 
   @include media('desktop') {
-    background: url(../img/blur-vectors/Vector\ 4_desk@1x.png),
-      url(../img/blur-vectors/Vector\ 6_desk@1x.png),
-      url(../img/blur-vectors/Vector\ 2_desk@1x.png),
-      url(../img/blur-vectors/Vector\ 5_desk@1x.png);
+    background: url(../img/blur-vectors/Vector4_desk@1x.png),
+      url(../img/blur-vectors/Vector6_desk@1x.png),
+      url(../img/blur-vectors/Vector2_desk@1x.png),
+      url(../img/blur-vectors/Vector5_desk@1x.png);
 
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 
