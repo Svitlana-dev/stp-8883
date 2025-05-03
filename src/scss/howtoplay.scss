@@ -1,0 +1,205 @@
+.howtoplay {
+  background: url(../img/how-to-play/decor_mob@1x.png),
+    url(../img/how-to-play/decor_mob@1x.png),
+    linear-gradient(
+      180deg,
+      #3c5578 1.44%,
+      #7d8ca9 42.31%,
+      #7c8ba8 58.17%,
+      #3c5578 100%
+    );
+
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 465px 270px, 465px 270px, cover;
+  background-position: top 530px center, bottom 490px center, center;
+
+  @include media('desktop') {
+    background: url(../img/how-to-play/decor_desk@1x.png),
+      linear-gradient(
+        180deg,
+        #3c5578 1.44%,
+        #7d8ca9 42.31%,
+        #7c8ba8 58.17%,
+        #3c5578 100%
+      );
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1200px auto, cover;
+    background-position: bottom 115px center, center;
+  }
+}
+.howtoplay-title {
+  margin-bottom: 10px;
+}
+.how-to-play-list {
+  @include media('desktop') {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 24px;
+  }
+}
+.how-to-play-item {
+  display: block;
+  width: 288px;
+  height: 300px;
+  padding-top: 58.5px;
+  padding-inline: 25px;
+
+  color: #fffcfc;
+
+  &:nth-child(even) {
+    color: #16191d;
+  }
+
+  @include media('desktop') {
+    width: 360px;
+    height: 439px;
+
+    padding-top: 98px;
+    padding-inline: 30px;
+
+    &:last-child {
+      color: #16191d;
+    }
+  }
+}
+.how-to-play-item {
+  background-size: 100px 100px, 465px 446px;
+  background-position: bottom 43px center, center;
+  background-repeat: no-repeat, no-repeat;
+
+  &:nth-child(1) {
+    background-image: url(../img/how-to-play/st1_@1x.png),
+      url(../img/how-to-play/card1_mob@1x.png);
+  }
+  &:nth-child(2) {
+    background-image: url(../img/how-to-play/st2_@1x.png),
+      url(../img/how-to-play/card2_mob@1x.png);
+
+    margin-bottom: 45px;
+  }
+  &:nth-child(3) {
+    background-image: url(../img/how-to-play/st3_@1x.png),
+      url(../img/how-to-play/card1_mob@1x.png);
+
+    margin-bottom: 45px;
+  }
+  &:nth-child(4) {
+    background-image: url(../img/how-to-play/st4_@1x.png),
+      url(../img/how-to-play/card2_mob@1x.png);
+  }
+  &:nth-child(5) {
+    background-image: url(../img/how-to-play/st5_mob@1x.png),
+      url(../img/how-to-play/card1_mob@1x.png);
+  }
+
+  @include media('desktop') {
+    background-size: 140px 140px, 398px 480px;
+    background-position: bottom 95px center, center;
+    background-repeat: no-repeat, no-repeat;
+    margin-bottom: 0;
+
+    &:nth-child(1) {
+      background-image: url(../img/how-to-play/st1_@1x.png),
+        url(../img/how-to-play/card_desk@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-position: bottom 95px center, bottom 15px center;
+        background-image: url(../img/how-to-play/st1_@1x.png),
+          url(../img/how-to-play/card-h_desk@1x.png);
+      }
+    }
+    &:nth-child(2) {
+      background-image: url(../img/how-to-play/st2_@1x.png),
+        url(../img/how-to-play/card2_desk@1x.png);
+      margin-bottom: 0;
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-size: 140px 140px, 398px 480px;
+        background-position: bottom 75px center, bottom -2px center;
+        background-image: url(../img/how-to-play/st2_@1x.png),
+          url(../img/how-to-play/card2-h_desk@1x.png);
+      }
+    }
+    &:nth-child(3) {
+      background-image: url(../img/how-to-play/st3_@1x.png),
+        url(../img/how-to-play/card_desk@1x.png);
+      margin-bottom: 0;
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-position: bottom 95px center, bottom 15px center;
+        background-image: url(../img/how-to-play/st3_@1x.png),
+          url(../img/how-to-play/card-h_desk@1x.png);
+      }
+    }
+    &:nth-child(4) {
+      background-image: url(../img/how-to-play/st4_@1x.png),
+        url(../img/how-to-play/card2_desk@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-size: 140px 140px, 398px 480px;
+        background-position: bottom 75px center, bottom -2px center;
+        background-image: url(../img/how-to-play/st4_@1x.png),
+          url(../img/how-to-play/card2-h_desk@1x.png);
+      }
+    }
+    &:nth-child(5) {
+      background-image: url(../img/how-to-play/st5_@1x.png),
+        url(../img/how-to-play/card2_desk@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        background-size: 140px 140px, 398px 480px;
+        background-position: bottom 75px center, bottom -2px center;
+        background-image: url(../img/how-to-play/st5_@1x.png),
+          url(../img/how-to-play/card2-h_desk@1x.png);
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(5) {
+      background-size: 140px 140px, 535px 535px;
+      background-position: bottom 75px center, center;
+
+      transform: translateY(-30px);
+    }
+    &:nth-child(1),
+    &:nth-child(3) {
+      transform: translateY(50px);
+    }
+    &:nth-child(4),
+    &:nth-child(5) {
+      transform: translateY(-70px);
+    }
+  }
+}
+.htp-step {
+  text-align: center;
+  margin-bottom: 6px;
+
+  @include media('desktop') {
+    margin-bottom: 0;
+  }
+}
+.htp-title {
+  font-size: 20px;
+
+  @include media('desktop') {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 28px;
+  }
+}
