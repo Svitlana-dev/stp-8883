@@ -1,0 +1,63 @@
+[data-section='about'] {
+  padding: 20px 0;
+
+  @include media('desktop') {
+    padding: 50px 0;
+  }
+}
+
+.about-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  @include media('desktop') {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.about-title {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  padding-bottom: 10px;
+
+  @include media('desktop') {
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+}
+
+.about-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff4f4;
+  padding-bottom: 10px;
+
+  @include media('desktop') {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.about-wrap .about-text:last-child {
+  padding: 10px 0 0;
+
+  @include media('desktop') {
+    padding: 20px 0 0;
+  }
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+
+  @include media('desktop') {
+    flex-direction: row;
+  }
+}
+
+.about-img {
+  width: 100%;
+}
