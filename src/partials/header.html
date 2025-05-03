@@ -2,7 +2,29 @@
   <div class="container header-container">
     <!-- Logo -->
     <a href="/index.html" class="header-logo">
-      <img src="img/logo/logo-mobile@1x.jpg" alt="Game logo" class="logo-img" />
+      <picture>
+        <source
+          srcset="
+            img/logo/logo-desktop@1x.jpg 1x,
+            img/logo/logo-desktop@2x.jpg 2x
+          "
+          media="(min-width: 1200px)"
+          type="image/jpeg"
+        />
+        <source
+          srcset="
+            img/logo/logo-mobile@1x.jpg 1x,
+            img/logo/logo-mobile@2x.jpg 2x
+          "
+          media="(max-width: 1199px)"
+          type="image/jpeg"
+        />
+        <img
+          src="img/logo/logo-desktop@1x.jpg"
+          alt="Game logo"
+          class="logo-img"
+        />
+      </picture>
     </a>
 
     <!-- Navigation for desktop -->
