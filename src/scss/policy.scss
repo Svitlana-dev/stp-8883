@@ -1,0 +1,111 @@
+.page-header {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #3c5578;
+  padding: 4px 0;
+  @include media('desktop') {
+    padding: 16.5px 0;
+  }
+}
+.back-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: fit-content;
+
+  @include media('desktop') {
+    border: 1px solid #16191d;
+    border-radius: 20px 0;
+    padding: 10px 20px;
+    color: #16191d;
+    background-color: #f8ba6e;
+    transition: background-color,
+      box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 83px 5px rgba(242, 123, 4, 0.48);
+      background-color: #f8ba6e;
+      transition: background-color,
+        box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:active {
+      background-color: #94a3c0;
+      box-shadow: none;
+      transition: background-color,
+        box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  }
+}
+.back-btn-icon {
+  transform: rotate(-90deg);
+  @include media('desktop') {
+    display: none;
+  }
+}
+.back-btn-text {
+  @include media('mobile') {
+    display: none;
+  }
+
+  @include media('desktop') {
+    display: inline;
+  }
+}
+.policy-section.main {
+  padding-top: 78px;
+  padding-bottom: 20px;
+
+  @include media('desktop') {
+    padding-top: 120px;
+    padding-bottom: 15px;
+  }
+}
+.policy-section {
+  padding: 10px 0;
+
+  @include media('desktop') {
+    padding: 15px 0;
+  }
+}
+.policy-section:last-of-type {
+  padding-bottom: 40px;
+
+  @include media('desktop') {
+    padding-bottom: 80px;
+  }
+}
+.policy-title {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 10px;
+
+  @include media('desktop') {
+    margin-bottom: 20px;
+  }
+}
+.policy-subtitle {
+  background-color: $_main_bg_color;
+
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.policy-list {
+  list-style-type: disc;
+  padding-left: 30px;
+}
+.policy-link {
+  text-decoration: underline;
+  transition: color 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $_accent_color;
+  }
+}
