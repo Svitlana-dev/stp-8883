@@ -1,0 +1,39 @@
+.trailer {
+  padding: 40px 0;
+
+  @include media('desktop') {
+    padding: 100px 0;
+  }
+}
+.trailer-title {
+  margin-bottom: 10px;
+}
+.trailer-text {
+  margin-bottom: 10px;
+  @include media('desktop') {
+    margin-bottom: 30px;
+  }
+}
+.custom-video-wrapper {
+  position: relative;
+  width: 288px;
+  height: 200px;
+  @include media('desktop') {
+    width: 1128px;
+    height: 500px;
+  }
+}
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 37px;
+  height: 32px;
+  background: url('../img/trailer/play.png') no-repeat center center;
+  background-size: contain;
+  border: none;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
