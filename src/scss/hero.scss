@@ -1,0 +1,226 @@
+.hero {
+  position: relative;
+  margin: 48px 0 20px 0;
+  overflow: hidden;
+
+  @include media('desktop') {
+    margin: 80px 0 50px 0;
+  }
+}
+
+.hero-images {
+  width: 336px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 350px;
+  background-image: url('/img/hero/world-mobile@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('/img/hero/world-mobile@2x.jpg');
+  }
+
+  @include media('desktop') {
+    width: 1236px;
+    min-height: 760px;
+    background-image: url('/img/hero/world-desktop@1x.jpg');
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/img/hero/world-desktop@2x.jpg');
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 9.5%;
+    left: 63%;
+    transform: translateX(-50%);
+    width: 210px;
+    height: auto;
+    aspect-ratio: 7 / 1;
+    background: url('/img/hero/sword-mobile@1x.png') no-repeat center/contain;
+    pointer-events: none;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/img/hero/sword-mobile@2x.png');
+    }
+
+    @include media('desktop') {
+      background-image: url('/img/hero/sword-desktop@1x.png');
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/img/hero/sword-desktop@2x.png');
+      }
+
+      left: 59%;
+      width: 830px;
+      top: 10.5%;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 71%;
+    transform: translateX(-50%);
+    width: 137px;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    background: url('/img/hero/man-mobile@1x.png') no-repeat center/contain;
+    pointer-events: none;
+
+    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url('/img/hero/man-mobile@2x.png');
+    }
+
+    @include media('desktop') {
+      background-image: url('/img/hero/man-desktop@1x.png');
+
+      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url('/img/hero/man-desktop@2x.png');
+      }
+
+      left: 83%;
+      width: 350px;
+      bottom: -25px;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+
+  @include media('desktop') {
+    max-height: 760px;
+  }
+}
+
+.hero-title {
+  padding: 10px 16px;
+  font-family: 'Alfa Slab One', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: -1px -1px 0 #3c5578, 1px -1px 0 #3c5578, -1px 1px 0 #3c5578,
+    1px 1px 0 #3c5578;
+
+  @include media('desktop') {
+    padding: 40px 36px;
+  }
+}
+
+.hero-title-main {
+  text-transform: uppercase;
+  font-size: 27px;
+  line-height: 100%;
+
+  @include media('desktop') {
+    font-size: 91px;
+  }
+}
+
+.hero-subtitle {
+  display: block;
+  font-size: 20px;
+  text-align: right;
+
+  @include media('desktop') {
+    font-size: 64px;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-top: 25px;
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  @include media('desktop') {
+    bottom: 220px;
+    display: flex;
+    flex-direction: column;
+
+    .hero-button {
+      order: 1;
+    }
+
+    .hero-text {
+      order: 2;
+    }
+
+    .hero-description {
+      order: 3;
+    }
+  }
+}
+
+.hero-text {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-size: 24px;
+  color: #fafafa;
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+
+  @include media('desktop') {
+    margin-top: 15px;
+    font-size: 32px;
+  }
+}
+
+.hero-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #fd9732;
+  border-radius: 0 20px;
+  padding: 10px 20px;
+  height: 52px;
+  background-color: #3c5578;
+  font-size: 16px;
+  transition: background-color,
+    box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:active {
+    background-color: #fd9732;
+    box-shadow: none;
+    border: 2px solid #16191d;
+    color: #16191d;
+  }
+
+  @include media('desktop') {
+    padding: 20px;
+    width: 280px;
+    height: 72px;
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 83px 5px rgba(242, 123, 4, 0.48);
+    }
+
+    &:active {
+      background-color: #fd9732;
+      box-shadow: none;
+      border: 2px solid #16191d;
+      color: #16191d;
+    }
+  }
+}
+
+.hero-description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+
+  @include media('desktop') {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 36px;
+    margin-top: 0;
+  }
+}
