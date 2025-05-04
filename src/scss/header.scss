@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-[data-header] {
+.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -121,15 +121,14 @@ html {
 
 /* ---------------------- MODAL CONTENT ---------------------- */
 .modal {
-  height: 383px;
   overflow-y: auto;
   background: rgba(60, 85, 120, 0.9);
-  padding: 18px 16px;
+  padding: 18px 16px 74px 0;
   opacity: 0;
   transition: transform 300ms ease, opacity 300ms ease;
   position: relative;
   z-index: 3100;
-  width: 100%;
+  width: 336px;
   max-width: 1200px;
   margin: 0 auto;
 }

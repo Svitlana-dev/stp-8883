@@ -1,26 +1,28 @@
-[data-section='hero'] {
+.hero {
   position: relative;
-  padding: 48px 0 20px 0;
+  margin: 48px 0 20px 0;
   overflow: hidden;
 
   @include media('desktop') {
-    padding: 80px 0 50px 0;
+    margin: 80px 0 50px 0;
   }
 }
 
 .hero-images {
+  width: 336px;
+  margin: 0 auto;
   position: relative;
   min-height: 350px;
   background-image: url('/img/hero/world-mobile@1x.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('/img/hero/world-mobile@2x.jpg');
   }
 
   @include media('desktop') {
+    width: 1236px;
     min-height: 760px;
     background-image: url('/img/hero/world-desktop@1x.jpg');
 
@@ -32,14 +34,13 @@
   &::before {
     content: '';
     position: absolute;
-    top: 11%;
-    left: 65%;
+    top: 9.5%;
+    left: 63%;
     transform: translateX(-50%);
-    width: 170px;
+    width: 210px;
     height: auto;
     aspect-ratio: 7 / 1;
     background: url('/img/hero/sword-mobile@1x.png') no-repeat center/contain;
-    z-index: 2;
     pointer-events: none;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -53,9 +54,9 @@
         background-image: url('/img/hero/sword-desktop@2x.png');
       }
 
-      left: 60%;
-      width: 680px;
-      top: 12.5%;
+      left: 59%;
+      width: 830px;
+      top: 10.5%;
     }
   }
 
@@ -69,7 +70,6 @@
     height: auto;
     aspect-ratio: 2 / 3;
     background: url('/img/hero/man-mobile@1x.png') no-repeat center/contain;
-    z-index: 2;
     pointer-events: none;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
@@ -83,7 +83,7 @@
         background-image: url('/img/hero/man-desktop@2x.png');
       }
 
-      left: 81%;
+      left: 83%;
       width: 350px;
       bottom: -25px;
       transform: translateX(-50%);
@@ -100,46 +100,39 @@
   }
 }
 
-.hero-wrapper {
-  padding: 15px;
-
-  @include media('desktop') {
-    padding: 36px;
-  }
-}
-
 .hero-title {
-  padding: 20px 16px;
-  font-size: 24px;
+  padding: 10px 16px;
   font-family: 'Alfa Slab One', sans-serif;
   font-weight: 400;
   color: #fff;
-  text-transform: uppercase;
   text-shadow: -1px -1px 0 #3c5578, 1px -1px 0 #3c5578, -1px 1px 0 #3c5578,
     1px 1px 0 #3c5578;
 
   @include media('desktop') {
-    font-size: 87px;
-    letter-spacing: 0.5px;
     padding: 40px 36px;
+  }
+}
+
+.hero-title-main {
+  text-transform: uppercase;
+  font-size: 27px;
+  line-height: 100%;
+
+  @include media('desktop') {
+    font-size: 91px;
   }
 }
 
 .hero-subtitle {
   display: block;
   font-size: 20px;
-  font-family: 'Alfa Slab One', sans-serif;
-  font-weight: 400;
-  color: #fff;
   text-align: right;
-  text-transform: none;
-  text-shadow: -1px -1px 0 #3c5578, 1px -1px 0 #3c5578, -1px 1px 0 #3c5578,
-    1px 1px 0 #3c5578;
 
   @include media('desktop') {
     font-size: 64px;
     line-height: 100%;
     text-transform: uppercase;
+    margin-top: 25px;
   }
 }
 
@@ -151,7 +144,6 @@
     bottom: 220px;
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
 
     .hero-button {
       order: 1;
@@ -172,10 +164,10 @@
   font-size: 24px;
   color: #fafafa;
   white-space: pre-wrap;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 
   @include media('desktop') {
-    padding-top: 15px;
+    margin-top: 15px;
     font-size: 32px;
   }
 }
@@ -222,13 +214,13 @@
 }
 
 .hero-description {
-  padding-top: 10px;
+  margin-top: 10px;
   font-size: 16px;
   color: #fff;
 
   @include media('desktop') {
     font-family: 'Alegreya Sans', sans-serif;
     font-size: 36px;
-    padding-top: 0;
+    margin-top: 0;
   }
 }
