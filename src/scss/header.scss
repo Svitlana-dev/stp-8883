@@ -103,6 +103,10 @@ html {
   pointer-events: none;
   transition: opacity 300ms ease, visibility 300ms ease;
   backdrop-filter: blur(11.5px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 48px;
 }
 
 [data-mobile-menu][data-visible='open'] {
@@ -125,7 +129,9 @@ html {
   transition: transform 300ms ease, opacity 300ms ease;
   position: relative;
   z-index: 3100;
-  margin-top: 45px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .modal.closing {
