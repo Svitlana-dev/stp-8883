@@ -1,25 +1,49 @@
 <section id="hero" class="hero">
-  
-    <div class="hero-images">
-        <h1 class="hero-title"><span class="hero-title-main">Legends Reborn</span><span class="hero-subtitle">Last Battle</span></h1>
-    </div>
+  <div class="hero-images">
+    <img src="/img/hero/sword-mobile@1x.png" class="hero-sword" />
+    <img src="/img/hero/man-mobile@1x.png" class="hero-man" />
+    <h1 class="hero-title">
+      <span class="hero-title-main">Legends Reborn</span
+      ><span class="hero-subtitle">Last Battle</span>
+      <picture>
+        <source
+          srcset="
+            /img/hero/sword-mobile@2x.png 2x,
+            /img/hero/sword-mobile@1x.png 1x
+          "
+          media="(max-width: 1199px)"
+        />
+        <source
+          srcset="
+            /img/hero/sword-desktop@2x.png 2x,
+            /img/hero/sword-desktop@1x.png 1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <img
+          src="/img/hero/sword-mobile@1x.png"
+          alt="Hero character looking at magical portal"
+          class="about-img"
+        />
+      </picture>
+    </h1>
+  </div>
 
-    <div class="hero-content">
-      <p class="hero-text">Start your Zero to Hero Journey!</p>
-      <a
-        class="hero-button"
-        href="https://play.google.com/store/apps/details?id=com.Knight.GrandQuest"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg class="icon-google" width="32" height="32">
-          <use href="/img/sprite.svg#google-play"></use>
-        </svg>
-        <span class="btn-google-text">Get it on Google Play</span>
-      </a>
-      <p class="hero-description">
-        Summon mythic heroes, battle epic bosses, and conquer the world!
-      </p>
-    </div>
+  <div class="hero-content">
+    <p class="hero-text">Start your Zero to Hero Journey!</p>
+    <a
+      class="hero-button"
+      href="https://play.google.com/store/apps/details?id=com.Knight.GrandQuest"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <svg class="icon-google" width="32" height="32">
+        <use href="/img/sprite.svg#google-play"></use>
+      </svg>
+      <span class="btn-google-text">Get it on Google Play</span>
+    </a>
+    <p class="hero-description">
+      Summon mythic heroes, battle epic bosses, and conquer the world!
+    </p>
   </div>
 </section>
