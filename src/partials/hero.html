@@ -1,11 +1,9 @@
 <section id="hero" class="hero">
   <div class="hero-images">
-    <img src="/img/hero/sword-mobile@1x.png" class="hero-sword" />
-    <img src="/img/hero/man-mobile@1x.png" class="hero-man" />
     <h1 class="hero-title">
       <span class="hero-title-main">Legends Reborn</span
       ><span class="hero-subtitle">Last Battle</span>
-      <picture>
+      <picture class="hero-sword">
         <source
           srcset="
             /img/hero/sword-mobile@2x.png 2x,
@@ -25,6 +23,24 @@
           alt="Hero character looking at magical portal"
           class="about-img"
         />
+      </picture>
+
+      <picture class="hero-man">
+        <source
+          srcset="
+            /img/hero/man-desktop@2x.png 2x,
+            /img/hero/man-desktop@1x.png 1x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            /img/hero/man-mobile@2x.png 2x,
+            /img/hero/man-mobile@1x.png 1x
+          "
+          media="(max-width: 1199px)"
+        />
+        <img src="/img/hero/man-mobile@1x.png" alt="Warrior character" />
       </picture>
     </h1>
   </div>

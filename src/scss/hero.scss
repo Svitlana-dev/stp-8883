@@ -31,128 +31,10 @@
       background-image: url('/img/hero/world-desktop@2x.jpg');
     }
   }
-
-  .hero-sword {
-    position: absolute;
-    top: 9.5%;
-    left: 63%;
-    transform: translateX(-50%);
-    width: 210px;
-    pointer-events: none;
-    content: url('/img/hero/sword-mobile@1x.png');
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      content: url('/img/hero/sword-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      top: 10%;
-      left: 59%;
-      width: 830px;
-      content: url('/img/hero/sword-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        content: url('/img/hero/sword-desktop@2x.png');
-      }
-    }
-  }
-
-  .hero-man {
-    position: absolute;
-    bottom: -9px;
-    left: 71%;
-    transform: translateX(-50%);
-    width: 137px;
-    height: auto;
-    pointer-events: none;
-    content: url('/img/hero/man-mobile@1x.png');
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      content: url('/img/hero/man-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      bottom: -25px;
-      left: 83%;
-      width: 350px;
-      content: url('/img/hero/man-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        content: url('/img/hero/man-desktop@2x.png');
-      }
-    }
-  }
-
-  @include media('desktop') {
-    min-height: 760px;
-    background-image: url('/img/hero/world-desktop@1x.jpg');
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/img/hero/world-desktop@2x.jpg');
-    }
-  }
-
-  /*&::before {
-    content: '';
-    position: absolute;
-    top: 9.5%;
-    left: 63%;
-    transform: translateX(-50%);
-    width: 210px;
-    height: auto;
-    aspect-ratio: 7 / 1;
-    background: url('/img/hero/sword-mobile@1x.png') no-repeat center/contain;
-    pointer-events: none;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/img/hero/sword-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      background-image: url('/img/hero/sword-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/img/hero/sword-desktop@2x.png');
-      }
-
-      left: 59%;
-      width: 830px;
-      top: 10%;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 71%;
-    transform: translateX(-50%);
-    width: 137px;
-    height: auto;
-    aspect-ratio: 2 / 3;
-    background: url('/img/hero/man-mobile@1x.png') no-repeat center/contain;
-    pointer-events: none;
-
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/img/hero/man-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      background-image: url('/img/hero/man-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/img/hero/man-desktop@2x.png');
-      }
-
-      left: 83%;
-      width: 350px;
-      bottom: -25px;
-      transform: translateX(-50%);
-    }
-  }*/
 }
 
 .hero-title {
+  position: relative;
   padding: 10px 16px;
   font-family: 'Alfa Slab One', sans-serif;
   font-weight: 400;
@@ -161,10 +43,47 @@
     1px 1px 0 #3c5578;
   max-width: 320px;
   margin: 0 auto;
+  text-align: center;
 
   @include media('desktop') {
     padding: 40px 36px;
     max-width: 1200px;
+  }
+
+  .hero-sword {
+    position: absolute;
+    top: 40%;
+    left: 80%;
+    transform: translateX(-50%);
+    width: 280px;
+    pointer-events: none;
+
+    @include media('desktop') {
+      width: 830px;
+      top: 32%;
+      left: 70%;
+    }
+  }
+
+  .hero-man {
+    position: absolute;
+    top: 186%;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 137px;
+    pointer-events: none;
+
+    @include media('desktop') {
+      top: 110%;
+      left: 83%;
+      width: 350px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 }
 
