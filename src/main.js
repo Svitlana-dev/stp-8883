@@ -1,7 +1,3 @@
 import './js/trailer.js';
-
-import { initBurgerMenu } from './js/burgerMenu.js';
-
-document.addEventListener('DOMContentLoaded', () => {
-  initBurgerMenu();
-});
+import './js/burgerMenu.js';
+import './js/pop-up.js';

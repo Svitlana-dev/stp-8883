@@ -1,0 +1,90 @@
+.pop-up {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(60, 85, 120, 0.9);
+  padding: 20px 0;
+  z-index: 9999;
+
+  @include media('desktop') {
+    background: #3c5578;
+    padding: 60px 0;
+  }
+}
+
+.pop-up.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.pop-up-content {
+  @include media('desktop') {
+    width: 754px;
+    margin: 0 auto;
+  }
+}
+
+.pop-up-text {
+  font-size: 16px;
+
+  @include media('desktop') {
+    font-size: 28px;
+  }
+}
+
+.pop-up-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+
+  @include media('desktop') {
+    flex-direction: row;
+    justify-content: center;
+    gap: 49px;
+    margin-top: 30px;
+  }
+}
+
+.pop-up-btn {
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 16px;
+  color: #f0f0f0;
+  border: 2px solid #fd9732;
+  border-radius: 0 20px;
+  padding: 10px 20px;
+  background-color: #3c5578;
+  transition: background-color,
+    box-shadow 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:active {
+    background-color: #fd9732;
+    box-shadow: none;
+    border: 2px solid #16191d;
+    color: #16191d;
+  }
+
+  @include media('desktop') {
+    font-size: 20px;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 83px 5px rgba(242, 123, 4, 0.48);
+    }
+
+    &:active {
+      background-color: #fd9732;
+      box-shadow: none;
+      border: 2px solid #16191d;
+      color: #16191d;
+    }
+  }
+}
