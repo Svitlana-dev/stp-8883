@@ -1,0 +1,145 @@
+.faq {
+  background: transparent;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url(../img/faq/blur_@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/faq/blur_@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 542px auto;
+  background-position-x: 56%;
+  background-position-y: -48px;
+  @include media('desktop') {
+    padding-bottom: 0;
+    background: none;
+  }
+}
+.faq-container {
+  position: relative;
+  background-image: url(../img/faq/bg-img_@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/faq/bg-img_@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 253px 374px;
+  background-position-y: 66px;
+
+  @include media('desktop') {
+    padding-bottom: 80px;
+
+    background-image: url(../img/faq/bg-img_@1x.png),
+      url(../img/faq/bg-elipse_@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/faq/bg-img_@2x.png),
+        url(../img/faq/bg-elipse_@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 473px auto, 628px auto;
+    background-position: top 115px left, top 570px left 0px;
+  }
+}
+.faq-container::before {
+  content: '';
+  position: absolute;
+  top: 66px;
+  left: 0;
+  display: block;
+  width: 106px;
+  height: 374px;
+  background-image: url(../img/faq/bg-item_@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/faq/bg-item_@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include media('desktop') {
+    display: none;
+  }
+}
+.faq-title {
+  text-align: center;
+  margin-bottom: 310px;
+  @include media('desktop') {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+
+#accordion-container-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 648px;
+  margin-left: auto;
+  @include media('desktop') {
+    gap: 20px;
+  }
+  .ac {
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    margin-bottom: initial;
+    border: initial;
+
+    background-color: #a1b2d6;
+    padding: 10px 20px;
+    border: 1px solid #fd9732;
+    border-radius: 0 20px 0 0;
+
+    transition: border-radius 400ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &.is-active {
+      border-radius: 0 20px 0 20px;
+    }
+  }
+  .ac .ac-trigger {
+    width: auto;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+  }
+  .ac-title-faq {
+    font-weight: 500;
+    font-size: 20px;
+    color: #16191d;
+  }
+
+  .ac .ac-trigger::after {
+    display: none;
+  }
+  .accordion-content-faq {
+    color: #5b6a87;
+    margin-top: 10px;
+  }
+
+  .ac-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .ac-btn-faq .ac-icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(180deg);
+  }
+  .ac-trigger[aria-expanded='true'] .ac-icon {
+    transform: rotate(360deg);
+  }
+}
