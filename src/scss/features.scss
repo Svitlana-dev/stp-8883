@@ -1,0 +1,287 @@
+.features {
+  @include media('desktop') {
+    background-image: url(../img/features/vector-desktop@1x.png);
+    background-repeat: no-repeat;
+    background-size: 1357px auto;
+    background-position: bottom -72px center;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/vector-desktop@2x.png);
+    }
+  }
+}
+.features-container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+  background-image: url(../img/features/woman-mobile@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/features/woman-mobile@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 284px auto;
+  background-position: top 22px center;
+
+  @include media('desktop') {
+    max-width: 1200px;
+    padding: 0 36px;
+    background-image: url(../img/features/woman-desktop@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/woman-desktop@2x.png);
+    }
+
+    background-size: 350px auto;
+    background-position: top right 36px;
+  }
+}
+.features-title {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-size: 24px;
+  margin-bottom: 246px;
+  @include media('desktop') {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+}
+.features-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include media('desktop') {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+.features-item {
+  min-height: 258px;
+  width: 288px;
+  height: 300px;
+  padding-top: 133.5px;
+  padding-inline: 23px;
+  background-size: 96px 96px, 465px 446px;
+  background-position: center top 25px, center top -87px;
+  background-repeat: no-repeat, no-repeat;
+
+  &:nth-child(1) {
+    background-image: url(../img/features/warrior@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(2) {
+    background-image: url(../img/features/ninja@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(3) {
+    background-image: url(../img/features/map@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(4) {
+    background-image: url(../img/features/mage@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(5) {
+    background-image: url(../img/features/leaderboard@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(6) {
+    background-image: url(../img/features/voice@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/features/item-mobile@2x.png);
+
+    &:nth-child(1) {
+      background-image: url(../img/features/warrior@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(2) {
+      background-image: url(../img/features/ninja@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(3) {
+      background-image: url(../img/features/map@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(4) {
+      background-image: url(../img/features/mage@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(5) {
+      background-image: url(../img/features/leaderboard@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(6) {
+      background-image: url(../img/features/voice@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+  }
+
+  @include media('desktop') {
+    background-image: url(../img/features/item-desktop@1x.png);
+    background-size: 96px 96px, 360px 237px;
+    background-position: bottom 110px center;
+    background-repeat: no-repeat;
+
+    &:nth-child(1) {
+      background-image: url(../img/features/warrior@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover {
+      background-position: bottom 15px center;
+      background-image: url(../img/features/warrior@1x.png);
+    }
+
+    :nth-child(2) {
+      background-image: url(../img/features/ninja@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover {
+      background-size: 140px 140px;
+      background-position: bottom 75px center;
+      background-image: url(../img/features/ninja@1x.png);
+    }
+    &:nth-child(3) {
+      background-image: url(../img/features/map@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover {
+      background-position: bottom 15px center;
+      background-image: url(../img/features/map@1x.png);
+    }
+
+    &:nth-child(4) {
+      background-image: url(../img/features/mage@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover {
+      background-size: 140px 140px;
+      background-position: bottom 75px center;
+      background-image: url(../img/features/mage@1x.png);
+    }
+    &:nth-child(5) {
+      background-image: url(../img/features/leaderboard@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    &:hover {
+      background-size: 140px 140px;
+      background-position: bottom 75px center;
+      background-image: url(../img/features/leaderboard@1x.png);
+    }
+    &:nth-child(6) {
+      background-image: url(../img/features/voice@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      transition: background-image,
+        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    &:hover {
+      background-size: 140px 140px;
+      background-position: bottom 75px center;
+      background-image: url(../img/features/voice@1x.png);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/item-desktop@2x.png);
+
+      &:nth-child(1) {
+        background-image: url(../img/features/warrior@2x.png),
+          url(../img/features/item-desktop@2x.png);
+      }
+
+      &:hover {
+        background-size: 140px 140px;
+        background-position: bottom 75px center;
+        background-image: url(../img/features/warrior@2x.png);
+      }
+
+      &:nth-child(2) {
+        background-image: url(../img/features/ninja@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-size: 140px 140px;
+          background-position: bottom 75px center;
+          background-image: url(../img/features/ninja@2x.png);
+        }
+
+        &:nth-child(3) {
+          background-image: url(../img/features/map@2x.png),
+            url(../img/features/item-desktop@2x.png);
+        }
+
+        &:hover {
+          background-size: 140px 140px;
+          background-position: bottom 75px center;
+          background-image: url(../img/features/map@2x.png);
+        }
+
+        &:nth-child(4) {
+          background-image: url(../img/features/mage@2x.png),
+            url(../img/features/item-desktop@2x.png);
+        }
+
+        &:hover {
+          background-size: 140px 140px;
+          background-position: bottom 75px center;
+          background-image: url(../img/features/mage@2x.png);
+        }
+
+        &:nth-child(5) {
+          background-image: url(../img/features/leaderboard@2x.png),
+            url(../img/features/item-desktop@2x.png);
+        }
+
+        &:hover {
+          background-size: 140px 140px;
+          background-position: bottom 75px center;
+          background-image: url(../img/features/leaderboard@2x.png);
+        }
+
+        &:nth-child(6) {
+          background-image: url(../img/features/voice@2x.png),
+            url(../img/features/item-desktop@2x.png);
+        }
+
+        &:hover {
+          background-size: 140px 140px;
+          background-position: bottom 75px center;
+          background-image: url(../img/features/voice@2x.png);
+        }
+      }
+    }
+  }
+}
