@@ -1,0 +1,208 @@
+.features {
+  margin-bottom: 20px;
+  scroll-margin-top: 48px;
+
+  @include media('desktop') {
+    margin-bottom: 50px;
+    scroll-margin-top: 80px;
+  }
+}
+
+.features-title {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+
+  @include media('desktop') {
+    font-size: 32px;
+  }
+}
+
+.features-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+
+  @include media('desktop') {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.features-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: -1;
+
+  @include media('desktop') {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    order: 1;
+  }
+}
+
+.features-character {
+  width: 160px;
+  height: 210px;
+  background: url('/img/features/woman-mobile@1x.png') no-repeat bottom center /
+    contain;
+  margin-bottom: 24px;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/woman-mobile@2x.png');
+  }
+
+  @include media('desktop') {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 389px;
+    height: 749px;
+    background-image: url('/img/features/woman-desktop@1x.png');
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('/img/features/woman-desktop@2x.png');
+    }
+  }
+}
+
+.features-ellipse {
+  display: none;
+
+  @include media('desktop') {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 220px;
+    height: 80px;
+    transform: translateX(-50%);
+    background: url('/img/features/ellipse@1x.png') no-repeat center / contain;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('/img/features/ellipse@2x.png');
+    }
+  }
+}
+
+.features-left {
+  width: 100%;
+
+  @include media('desktop') {
+    width: calc(100% - 340px);
+  }
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  @media (max-width: 1199px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+.feature-item {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-frame {
+  background: url('/img/features/item-mobile@1x.png') no-repeat center / cover;
+  padding: 60px 16px 16px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/item-mobile@2x.png');
+  }
+
+  @media (min-width: 1200px) {
+    background-image: url('/img/features/item-desktop@1x.png');
+    width: 360px;
+    height: 237px;
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background-image: url('/img/features/item-desktop@2x.png');
+    }
+  }
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-bottom: 12px;
+}
+
+.feature-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e1e1e;
+
+  @include media('desktop') {
+    font-size: 16px;
+  }
+}
+
+.icon-warrior .feature-icon {
+  background-image: url('/img/features/warrior@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/warrior@2x.png');
+  }
+}
+
+.icon-ninja .feature-icon {
+  background-image: url('/img/features/ninja@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/ninja@2x.png');
+  }
+}
+
+.icon-map .feature-icon {
+  background-image: url('/img/features/map@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/map@2x.png');
+  }
+}
+
+.icon-mage .feature-icon {
+  background-image: url('/img/features/mage@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/mage@2x.png');
+  }
+}
+
+.icon-leaderboard .feature-icon {
+  background-image: url('/img/features/leaderboard@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/leaderboard@2x.png');
+  }
+}
+
+.icon-voice .feature-icon {
+  background-image: url('/img/features/voice@1x.png');
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    background-image: url('/img/features/voice@2x.png');
+  }
+}
