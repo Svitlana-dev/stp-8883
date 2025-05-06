@@ -1,4 +1,23 @@
 .reviews {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @include media('desktop') {
+    padding-top: 35px;
+    padding-bottom: 50px;
+
+    background-image: url(../img/reviews/blur-bg_desk@1x.png);
+    background-repeat: no-repeat;
+    background-size: 1357px auto;
+    background-position: bottom -72px center;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/reviews/blur-bg_desk@2x.png);
+    }
+  }
+}
+.reviews-container {
   background-image: url(../img/reviews/review_bg@1x.png);
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -9,23 +28,17 @@
   background-size: 284px auto;
   background-position: top 33px center;
 
-  padding-top: 40px;
-  padding-bottom: 20px;
   @include media('desktop') {
-    padding-top: 90px;
-    padding-bottom: 50px;
-
-    background-image: url(../img/reviews/review_bg@1x.png),
-      url(../img/reviews/blur-bg_desk@1x.png);
+    padding-top: 55px;
+    background-image: url(../img/reviews/review_bg@1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../img/reviews/review_bg@2x.png),
-        url(../img/reviews/blur-bg_desk@2x.png);
+      background-image: url(../img/reviews/review_bg@2x.png);
     }
 
-    background-size: 350px auto, 1357px 413px;
-    background-position: top 35px right 36px, bottom -22px center;
+    background-size: 350px auto;
+    background-position: top right 36px;
   }
 }
 .reviews-title {
