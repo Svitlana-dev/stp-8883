@@ -1,31 +1,31 @@
 .howtoplay {
-  background: url(../img/how-to-play/decor_mob@1x.png),
-    url(../img/how-to-play/decor_mob@1x.png),
-    linear-gradient(
-      180deg,
-      #3c5578 1.44%,
-      #7d8ca9 42.31%,
-      #7c8ba8 58.17%,
-      #3c5578 100%
-    );
+  // background: url(../img/how-to-play/decor_mob@1x.png),
+  //   url(../img/how-to-play/decor_mob@1x.png),
+  //   linear-gradient(
+  //     180deg,
+  //     #3c5578 1.44%,
+  //     #7d8ca9 42.31%,
+  //     #7c8ba8 58.17%,
+  //     #3c5578 100%
+  //   );
 
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 465px 270px, 465px 270px, cover;
-  background-position: top 530px center, bottom 490px center, center;
+  // background-repeat: no-repeat, no-repeat, no-repeat;
+  // background-size: 465px 270px, 465px 270px, cover;
+  // background-position: top 530px center, bottom 490px center, center;
 
-  @include media('desktop') {
-    background: url(../img/how-to-play/decor_desk@1x.png),
-      linear-gradient(
-        180deg,
-        #3c5578 1.44%,
-        #7d8ca9 42.31%,
-        #7c8ba8 58.17%,
-        #3c5578 100%
-      );
-    background-repeat: no-repeat, no-repeat;
-    background-size: 1200px auto, cover;
-    background-position: bottom 115px center, center;
-  }
+  // @include media('desktop') {
+  //   background: url(../img/how-to-play/decor_desk@1x.png),
+  //     linear-gradient(
+  //       180deg,
+  //       #3c5578 1.44%,
+  //       #7d8ca9 42.31%,
+  //       #7c8ba8 58.17%,
+  //       #3c5578 100%
+  //     );
+  //   background-repeat: no-repeat, no-repeat;
+  //   background-size: 1200px auto, cover;
+  //   background-position: bottom 115px center, center;
+  // }
 }
 .howtoplay-title {
   margin-bottom: 10px;
@@ -37,6 +37,9 @@
     flex-wrap: wrap;
     column-gap: 24px;
   }
+
+  filter: drop-shadow(0 4px 83px rgba(242, 123, 4, 0.48))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 .how-to-play-item {
   display: block;
@@ -64,9 +67,87 @@
   }
 }
 .how-to-play-item {
-  background-size: 100px 100px, 465px 446px;
-  background-position: bottom 43px center, center;
+  background-size: 100px 100px, contain;
+  background-position: bottom 43px center, center left 1px;
   background-repeat: no-repeat, no-repeat;
+  /* #region clip-path polygon */
+  clip-path: polygon(
+    47.443% 1.574%,
+    47.443% 1.574%,
+    47.999% 1.322%,
+    48.572% 1.127%,
+    49.158% 0.987%,
+    49.752% 0.903%,
+    50.35% 0.875%,
+    50.948% 0.903%,
+    51.542% 0.987%,
+    52.127% 1.127%,
+    52.7% 1.322%,
+    53.257% 1.574%,
+    96.613% 23.736%,
+    96.613% 23.736%,
+    97.214% 24.085%,
+    97.765% 24.493%,
+    98.263% 24.953%,
+    98.704% 25.46%,
+    99.087% 26.01%,
+    99.407% 26.597%,
+    99.662% 27.216%,
+    99.848% 27.862%,
+    99.961% 28.53%,
+    100% 29.214%,
+    100% 72.36%,
+    100% 72.36%,
+    99.961% 73.044%,
+    99.848% 73.712%,
+    99.662% 74.357%,
+    99.407% 74.977%,
+    99.087% 75.564%,
+    98.704% 76.113%,
+    98.263% 76.621%,
+    97.765% 77.081%,
+    97.214% 77.488%,
+    96.613% 77.838%,
+    53.257% 100%,
+    53.257% 100%,
+    52.7% 100.251%,
+    52.127% 100.447%,
+    51.542% 100.587%,
+    50.948% 100.671%,
+    50.35% 100.698%,
+    49.752% 100.671%,
+    49.158% 100.587%,
+    48.572% 100.447%,
+    47.999% 100.251%,
+    47.443% 100%,
+    4.086% 77.838%,
+    4.086% 77.838%,
+    3.485% 77.488%,
+    2.935% 77.081%,
+    2.437% 76.621%,
+    1.995% 76.113%,
+    1.612% 75.564%,
+    1.292% 74.977%,
+    1.037% 74.357%,
+    0.852% 73.712%,
+    0.738% 73.044%,
+    0.699% 72.36%,
+    0.699% 29.214%,
+    0.699% 29.214%,
+    0.736% 28.551%,
+    0.842% 27.903%,
+    1.017% 27.276%,
+    1.257% 26.673%,
+    1.558% 26.1%,
+    1.918% 25.56%,
+    2.335% 25.06%,
+    2.805% 24.603%,
+    3.325% 24.194%,
+    3.893% 23.839%,
+    4.086% 23.736%,
+    47.443% 1.574%
+  );
+  /* #endregion */
 
   &:nth-child(1) {
     background-image: url(../img/how-to-play/st1_@1x.png),
