@@ -1,13 +1,13 @@
 import Swiper from 'swiper';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation, Pagination } from 'swiper/modules';
 
-const previewSwiper = new Swiper('[data-preview]', {
+new Swiper('.swiper-container', {
+  modules: [Navigation, Pagination],
+  grabCursor: true,
   slidesPerView: 'auto',
-  spaceBetween: 24,
   centeredSlides: true,
   loop: true,
+  spaceBetween: 16,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -15,11 +15,5 @@ const previewSwiper = new Swiper('[data-preview]', {
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-  },
-  breakpoints: {
-    1200: {
-      slidesPerView: 3.5,
-      spaceBetween: 48,
-    },
   },
 });
