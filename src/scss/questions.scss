@@ -109,6 +109,14 @@
     &.is-active {
       border-radius: 0 20px 0 20px;
     }
+    &:hover,
+    &:focus {
+      box-shadow: 0 4px 83px 5px rgba(242, 123, 4, 0.48);
+    }
+    &.is-active:hover,
+    &.is-active:focus {
+      box-shadow: inset;
+    }
   }
   .ac .ac-trigger {
     width: auto;
