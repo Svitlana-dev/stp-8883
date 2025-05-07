@@ -13,12 +13,10 @@
 .swiper-container {
   width: 100%;
   overflow: hidden;
-  position: relative;
 }
 
 .swiper-wrapper {
   display: flex;
-  min-height: 172px;
   @include media('desktop') {
     align-items: center;
     min-height: 380px;
@@ -27,23 +25,23 @@
 }
 
 .swiper-slide {
+  position: absolute;
   width: 288px;
+  height: 172px;
   flex-shrink: 0;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  transform: scale(0.9);
 
-  &.swiper-slide-active {
+  /*&.swiper-slide-active {
     transform: scale(1);
     z-index: 2;
-  }
+  }*/
 
   @include media('desktop') {
-    transform: scale(0.85);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    position: absolute;
+    width: 650px;
+    height: 380px;
   }
 }
 
@@ -56,10 +54,6 @@
 
   @include media('desktop') {
     background-image: url(../img/preview/card3-desktop@1x.jpg);
-    left: 14%;
-    transform: translateX(-50%);
-    height: 169px;
-    width: 300px;
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
       background-image: url(../img/preview/card3-desktop@2x.jpg);
@@ -76,11 +70,6 @@
 
   @include media('desktop') {
     background-image: url(../img/preview/card2-desktop@1x.jpg);
-    z-index: 1;
-    left: 26%;
-    transform: translateX(-50%);
-    height: 225px;
-    width: 400px;
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
       background-image: url(../img/preview/card2-desktop@2x.jpg);
@@ -97,11 +86,6 @@
 
   @include media('desktop') {
     background-image: url(../img/preview/card1-desktop@1x.jpg);
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    height: 380px;
-    width: 650px;
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
       background-image: url(../img/preview/card1-desktop@2x.jpg);
@@ -118,11 +102,6 @@
 
   @include media('desktop') {
     background-image: url(../img/preview/card4-desktop@1x.jpg);
-    z-index: 1;
-    left: 73%;
-    transform: translateX(-50%);
-    height: 225px;
-    width: 400px;
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
       background-image: url(../img/preview/card4-desktop@2x.jpg);
@@ -139,10 +118,6 @@
 
   @include media('desktop') {
     background-image: url(../img/preview/card5-desktop@1x.jpg);
-    left: 86%;
-    transform: translateX(-50%);
-    height: 169px;
-    width: 300px;
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
       background-image: url(../img/preview/card5-desktop@2x.jpg);
