@@ -29,15 +29,17 @@
   @include media('desktop') {
     max-width: 1200px;
     padding: 0 36px;
-    background-image: url(../img/features/woman-desktop@1x.png);
+    background-image: url(../img/features/woman-desktop@1x.png),
+      url(../img/features/ellipse@1x.png);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../img/features/woman-desktop@2x.png);
+      background-image: url(../img/features/woman-desktop@2x.png),
+        url(../img/features/ellipse@2x.png);
     }
 
-    background-size: 350px auto;
-    background-position: top right 36px;
+    background-size: 350px auto, 628px auto;
+    background-position: top right 36px, top 570px left 0px;
   }
 }
 .features-title {
