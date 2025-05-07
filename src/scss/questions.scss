@@ -14,7 +14,15 @@
   background-position-y: -48px;
   @include media('desktop') {
     padding-bottom: 0;
-    background: none;
+    background-image: url(../img/faq/blur_desk@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/faq/blur_desk@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 1484px auto;
+    background-position: top 400px right -300px;
   }
 }
 .faq-container {
