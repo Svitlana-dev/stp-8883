@@ -12,32 +12,36 @@
 
 .swiper-container {
   width: 100%;
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
   overflow: hidden;
+  position: relative;
+
+  @include media('desktop') {
+    max-width: 1200px;
+    padding: 0 36px;
+  }
 }
 
 .swiper-wrapper {
   display: flex;
+  align-items: center;
+  min-height: 172px;
   @include media('desktop') {
-    align-items: center;
     min-height: 380px;
-    position: relative;
   }
 }
 
 .swiper-slide {
-  position: absolute;
   width: 288px;
   height: 172px;
   flex-shrink: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-
-  /*&.swiper-slide-active {
-    transform: scale(1);
-    z-index: 2;
-  }*/
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  will-change: transform;
 
   @include media('desktop') {
     width: 650px;
@@ -45,18 +49,36 @@
   }
 }
 
+.swiper-slide.swiper-slide-active {
+  transform: scale(1);
+  z-index: 3;
+}
+
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-next {
+  transform: scale(0.85);
+  z-index: 2;
+}
+
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(
+    .swiper-slide-next
+  ) {
+  transform: scale(0.7);
+  z-index: 1;
+}
+
 .slide-1 {
-  background-image: url(../img/preview/card3-mobile@1x.jpg);
+  background-image: url(../img/preview/card1-mobile@1x.jpg);
 
   @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
-    background-image: url(../img/preview/card3-mobile@2x.jpg);
+    background-image: url(../img/preview/card1-mobile@2x.jpg);
   }
 
   @include media('desktop') {
-    background-image: url(../img/preview/card3-desktop@1x.jpg);
+    background-image: url(../img/preview/card1-desktop@1x.jpg);
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
-      background-image: url(../img/preview/card3-desktop@2x.jpg);
+      background-image: url(../img/preview/card1-desktop@2x.jpg);
     }
   }
 }
@@ -78,17 +100,17 @@
 }
 
 .slide-3 {
-  background-image: url(../img/preview/card1-mobile@1x.jpg);
+  background-image: url(../img/preview/card3-mobile@1x.jpg);
 
   @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
-    background-image: url(../img/preview/card1-mobile@2x.jpg);
+    background-image: url(../img/preview/card3-mobile@2x.jpg);
   }
 
   @include media('desktop') {
-    background-image: url(../img/preview/card1-desktop@1x.jpg);
+    background-image: url(../img/preview/card3-desktop@1x.jpg);
 
     @media (min-resolution: 192dpi), (min-device-pixel-ratio: 2) {
-      background-image: url(../img/preview/card1-desktop@2x.jpg);
+      background-image: url(../img/preview/card3-desktop@2x.jpg);
     }
   }
 }
