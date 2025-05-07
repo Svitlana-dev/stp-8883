@@ -11,7 +11,6 @@
 }
 
 .hero-images {
-  width: 336px;
   margin: 0 auto;
   position: relative;
   min-height: 350px;
@@ -24,7 +23,7 @@
   }
 
   @include media('desktop') {
-    width: 1236px;
+    width: 1200px;
     min-height: 760px;
     background-image: url('/img/hero/world-desktop@1x.jpg');
 
