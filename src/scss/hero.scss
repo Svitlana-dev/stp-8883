@@ -7,101 +7,75 @@
     margin: 80px 0 100px 0;
     max-height: 760px;
     scroll-margin-top: 80px;
+    min-height: 760px;
   }
 }
 
-.hero-images {
-  margin: 0 auto;
-  position: relative;
-  min-height: 350px;
+.hero-bg {
   background-image: url('/img/hero/world-mobile@1x.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('/img/hero/world-mobile@2x.jpg');
   }
 
   @include media('desktop') {
-    width: 1200px;
-    min-height: 760px;
     background-image: url('/img/hero/world-desktop@1x.jpg');
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
       background-image: url('/img/hero/world-desktop@2x.jpg');
     }
   }
+}
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 9.5%;
-    left: 63%;
-    transform: translateX(-50%);
-    width: 210px;
-    height: auto;
-    aspect-ratio: 7 / 1;
-    background: url('/img/hero/sword-mobile@1x.png') no-repeat center/contain;
-    pointer-events: none;
+.hero-container {
+  max-width: 320px;
+  padding: 0 16px;
+  margin: 0 auto;
+  min-height: 350px;
+  background-image: url('/img/hero/sword-mobile@1x.png'),
+    url('/img/hero/man-mobile@1x.png');
+  background-size: 188px, 140px;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 85% 39px, right 27px bottom 0;
 
-    @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/img/hero/sword-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      background-image: url('/img/hero/sword-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/img/hero/sword-desktop@2x.png');
-      }
-
-      left: 59%;
-      width: 830px;
-      top: 10%;
-    }
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('/img/hero/sword-mobile@2x.png'),
+      url('/img/hero/man-mobile@2x.png');
   }
 
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -9px;
-    left: 71%;
-    transform: translateX(-50%);
-    width: 137px;
-    height: auto;
-    aspect-ratio: 2 / 3;
-    background: url('/img/hero/man-mobile@1x.png') no-repeat center/contain;
-    pointer-events: none;
+  @include media('desktop') {
+    max-width: 1200px;
+    padding: 0 36px;
+    min-height: 760px;
+    background-image: url('/img/hero/sword-desktop@1x.png'),
+      url('/img/hero/man-desktop@1x.png');
+    background-size: 837px, 350px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 86% 74px, right 27px bottom 0;
 
     @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-      background-image: url('/img/hero/man-mobile@2x.png');
-    }
-
-    @include media('desktop') {
-      background-image: url('/img/hero/man-desktop@1x.png');
-
-      @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-        background-image: url('/img/hero/man-desktop@2x.png');
-      }
-
-      left: 83%;
-      width: 350px;
-      bottom: -25px;
-      transform: translateX(-50%);
+      background-image: url('/img/hero/sword-desktop@2x.png'),
+        url('/img/hero/man-desktop@2x.png');
     }
   }
 }
 
 .hero-title {
-  padding: 10px 16px;
   font-family: 'Alfa Slab One', sans-serif;
   font-weight: 400;
   color: #fff;
   text-shadow: -1px -1px 0 #3c5578, 1px -1px 0 #3c5578, -1px 1px 0 #3c5578,
     1px 1px 0 #3c5578;
+  max-width: 320px;
+  margin: 0 auto;
+  padding-top: 15px;
 
   @include media('desktop') {
-    padding: 40px 36px;
+    max-width: 1200px;
+    padding-top: 36px;
   }
 }
 
@@ -129,10 +103,6 @@
 }
 
 .hero-content {
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 0 16px;
-
   @include media('desktop') {
     position: relative;
     bottom: 220px;
