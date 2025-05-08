@@ -1,13 +1,19 @@
 .hero {
   position: relative;
-  margin: 48px 0 40px 0;
-  scroll-margin-top: 48px;
+  padding-top: 48px;
+  background-image: url(../img/preview/blur_mob@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/preview/blur_mob@2x.png);
+  }
+  background-size: 862px auto;
+  background-repeat: no-repeat;
+  background-position: bottom -50px center;
 
   @include media('desktop') {
-    margin: 80px 0 100px 0;
-    max-height: 760px;
-    scroll-margin-top: 80px;
-    min-height: 760px;
+    padding-top: 80px;
+    height: 840px;
   }
 }
 
@@ -15,7 +21,7 @@
   background-image: url('/img/hero/world-mobile@1x.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom center;
 
   @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
     background-image: url('/img/hero/world-mobile@2x.jpg');
