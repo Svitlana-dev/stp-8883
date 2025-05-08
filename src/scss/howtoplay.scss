@@ -1,41 +1,67 @@
 .howtoplay {
-  background: url(../img/how-to-play/decor_mob@1x.png),
-    url(../img/how-to-play/decor_mob@1x.png),
-    linear-gradient(
-      180deg,
-      #3c5578 1.44%,
-      #7d8ca9 42.31%,
-      #7c8ba8 58.17%,
-      #3c5578 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #3c5578 1.44%,
+    #7d8ca9 42.31%,
+    #7c8ba8 58.17%,
+    #3c5578 100%
+  );
 
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 465px 270px, 465px 270px, cover;
-  background-position: top 530px center, bottom 490px center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 30px 0;
 
   @include media('desktop') {
-    background: url(../img/how-to-play/decor_desk@1x.png),
-      linear-gradient(
-        180deg,
-        #3c5578 1.44%,
-        #7d8ca9 42.31%,
-        #7c8ba8 58.17%,
-        #3c5578 100%
-      );
-    background-repeat: no-repeat, no-repeat;
-    background-size: 1200px auto, cover;
-    background-position: bottom 115px center, center;
+    padding: 40px 0;
   }
 }
 .howtoplay-title {
   margin-bottom: 10px;
+  @include media('desktop') {
+    margin-bottom: 49px;
+  }
 }
 .how-to-play-list {
+  position: relative;
   @include media('desktop') {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     column-gap: 24px;
+  }
+
+  filter: drop-shadow(0 4px 83px rgba(242, 123, 4, 0.48))
+    drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+.how-to-play-list::after {
+  content: '';
+  position: absolute;
+  top: 561px;
+
+  display: block;
+  width: 288px;
+  height: 488px;
+  background-image: url(../img/how-to-play/decor_mob@1x.png),
+    url(../img/how-to-play/decor_mob@1x.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top, bottom;
+  pointer-events: none;
+
+  @include media('desktop') {
+    top: 265px;
+    width: 100%;
+    height: 361px;
+    background-image: url(../img/how-to-play/decor_desk@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/how-to-play/decor_desk@2x.png);
+    }
+    background-size: contain;
+    background-position: center;
   }
 }
 .how-to-play-item {
@@ -51,142 +77,280 @@
     color: #16191d;
   }
 
+  &:not(:last-child) {
+    margin-bottom: 10px;
+
+    @include media('desktop') {
+      margin-bottom: 0;
+    }
+  }
+
   @include media('desktop') {
     width: 360px;
-    height: 439px;
+    height: 400px;
 
-    padding-top: 98px;
+    padding-top: 88px;
     padding-inline: 30px;
 
     &:last-child {
       color: #16191d;
     }
   }
-}
-.how-to-play-item {
-  background-size: 100px 100px, 465px 446px;
-  background-position: bottom 43px center, center;
+
+  background-size: 100px 100px, contain;
+  background-position: bottom 33px center, center left 1px;
   background-repeat: no-repeat, no-repeat;
-
-  &:nth-child(1) {
-    background-image: url(../img/how-to-play/st1_@1x.png),
-      url(../img/how-to-play/card1_mob@1x.png);
+  /* #region clip-path polygon for mobile and desktop*/
+  clip-path: polygon(
+    47.443% 1.574%,
+    47.443% 1.574%,
+    47.999% 1.322%,
+    48.572% 1.127%,
+    49.158% 0.987%,
+    49.752% 0.903%,
+    50.35% 0.875%,
+    50.948% 0.903%,
+    51.542% 0.987%,
+    52.127% 1.127%,
+    52.7% 1.322%,
+    53.257% 1.574%,
+    96.613% 23.736%,
+    96.613% 23.736%,
+    97.214% 24.085%,
+    97.765% 24.493%,
+    98.263% 24.953%,
+    98.704% 25.46%,
+    99.087% 26.01%,
+    99.407% 26.597%,
+    99.662% 27.216%,
+    99.848% 27.862%,
+    99.961% 28.53%,
+    100% 29.214%,
+    100% 72.36%,
+    100% 72.36%,
+    99.961% 73.044%,
+    99.848% 73.712%,
+    99.662% 74.357%,
+    99.407% 74.977%,
+    99.087% 75.564%,
+    98.704% 76.113%,
+    98.263% 76.621%,
+    97.765% 77.081%,
+    97.214% 77.488%,
+    96.613% 77.838%,
+    53.257% 100%,
+    53.257% 100%,
+    52.7% 100.251%,
+    52.127% 100.447%,
+    51.542% 100.587%,
+    50.948% 100.671%,
+    50.35% 100.698%,
+    49.752% 100.671%,
+    49.158% 100.587%,
+    48.572% 100.447%,
+    47.999% 100.251%,
+    47.443% 100%,
+    4.086% 77.838%,
+    4.086% 77.838%,
+    3.485% 77.488%,
+    2.935% 77.081%,
+    2.437% 76.621%,
+    1.995% 76.113%,
+    1.612% 75.564%,
+    1.292% 74.977%,
+    1.037% 74.357%,
+    0.852% 73.712%,
+    0.738% 73.044%,
+    0.699% 72.36%,
+    0.699% 29.214%,
+    0.699% 29.214%,
+    0.736% 28.551%,
+    0.842% 27.903%,
+    1.017% 27.276%,
+    1.257% 26.673%,
+    1.558% 26.1%,
+    1.918% 25.56%,
+    2.335% 25.06%,
+    2.805% 24.603%,
+    3.325% 24.194%,
+    3.893% 23.839%,
+    4.086% 23.736%,
+    47.443% 1.574%
+  );
+  @include media('desktop') {
+    clip-path: polygon(
+      47.378% 0.787%,
+      47.378% 0.787%,
+      47.877% 0.561%,
+      48.392% 0.384%,
+      48.918% 0.255%,
+      49.452% 0.174%,
+      49.991% 0.142%,
+      50.53% 0.159%,
+      51.066% 0.223%,
+      51.595% 0.337%,
+      52.114% 0.499%,
+      52.618% 0.709%,
+      52.778% 0.787%,
+      96.955% 23.33%,
+      96.955% 23.33%,
+      97.495% 23.643%,
+      97.99% 24.007%,
+      98.438% 24.416%,
+      98.835% 24.867%,
+      99.179% 25.354%,
+      99.467% 25.874%,
+      99.696% 26.422%,
+      99.863% 26.994%,
+      99.965% 27.585%,
+      100% 28.19%,
+      100% 72.519%,
+      100% 72.519%,
+      99.967% 73.106%,
+      99.871% 73.679%,
+      99.714% 74.234%,
+      99.499% 74.768%,
+      99.228% 75.276%,
+      98.904% 75.754%,
+      98.529% 76.198%,
+      98.107% 76.604%,
+      97.639% 76.969%,
+      97.128% 77.287%,
+      96.955% 77.379%,
+      52.778% 99.922%,
+      52.778% 99.922%,
+      52.279% 100.148%,
+      51.764% 100.325%,
+      51.238% 100.455%,
+      50.703% 100.535%,
+      50.165% 100.567%,
+      49.626% 100.551%,
+      49.09% 100.486%,
+      48.561% 100.372%,
+      48.042% 100.21%,
+      47.537% 100%,
+      47.378% 99.922%,
+      3.201% 77.379%,
+      3.201% 77.379%,
+      2.661% 77.066%,
+      2.165% 76.703%,
+      1.717% 76.293%,
+      1.32% 75.843%,
+      0.976% 75.355%,
+      0.688% 74.835%,
+      0.46% 74.287%,
+      0.293% 73.715%,
+      0.19% 73.125%,
+      0.156% 72.519%,
+      0.156% 28.19%,
+      0.156% 28.19%,
+      0.188% 27.603%,
+      0.284% 27.03%,
+      0.441% 26.475%,
+      0.656% 25.941%,
+      0.927% 25.433%,
+      1.252% 24.955%,
+      1.626% 24.511%,
+      2.049% 24.105%,
+      2.517% 23.741%,
+      3.027% 23.422%,
+      3.201% 23.33%,
+      47.378% 0.787%
+    );
   }
-  &:nth-child(2) {
-    background-image: url(../img/how-to-play/st2_@1x.png),
-      url(../img/how-to-play/card2_mob@1x.png);
+  /* #endregion */
 
-    margin-bottom: 45px;
+  @for $i from 1 through 5 {
+    @if $i % 2 > 0 and $i != 5 {
+      &:nth-child(#{$i}) {
+        background-image: url(../img/how-to-play/st#{$i}_@1x.png),
+          url(../img/how-to-play/card1_mob@1x.png);
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../img/how-to-play/st#{$i}_@2x.png),
+            url(../img/how-to-play/card1_mob@1x.png);
+        }
+      }
+    } @else if $i == 5 {
+      background-image: url(../img/how-to-play/st#{$i}_mob@1x.png),
+        url(../img/how-to-play/card1_mob@1x.png);
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../img/how-to-play/st#{$i}_mob@2x.png),
+          url(../img/how-to-play/card1_mob@1x.png);
+      }
+    } @else {
+      &:nth-child(#{$i}) {
+        background-image: url(../img/how-to-play/st#{$i}_@1x.png),
+          url(../img/how-to-play/card2_mob@1x.png);
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: url(../img/how-to-play/st#{$i}_@2x.png),
+            url(../img/how-to-play/card2_mob@1x.png);
+        }
+      }
+    }
   }
+
+  &:nth-child(2),
   &:nth-child(3) {
-    background-image: url(../img/how-to-play/st3_@1x.png),
-      url(../img/how-to-play/card1_mob@1x.png);
-
     margin-bottom: 45px;
-  }
-  &:nth-child(4) {
-    background-image: url(../img/how-to-play/st4_@1x.png),
-      url(../img/how-to-play/card2_mob@1x.png);
-  }
-  &:nth-child(5) {
-    background-image: url(../img/how-to-play/st5_mob@1x.png),
-      url(../img/how-to-play/card1_mob@1x.png);
+
+    @include media('desktop') {
+      margin-bottom: 0;
+    }
   }
 
   @include media('desktop') {
-    background-size: 140px 140px, 398px 480px;
-    background-position: bottom 95px center, center;
-    background-repeat: no-repeat, no-repeat;
+    background-size: 140px 140px, 322px auto, contain;
+    background-position: bottom 48px center, center, center;
+    background-repeat: no-repeat;
     margin-bottom: 0;
 
-    &:nth-child(1) {
-      background-image: url(../img/how-to-play/st1_@1x.png),
-        url(../img/how-to-play/card_desk@1x.png);
+    transition: background-size 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
-      transition: background-image,
-        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    @for $i from 1 through 5 {
+      @if $i == 2 or $i == 4 or $i == 5 {
+        &:nth-child(#{$i}) {
+          background-image: url(../img/how-to-play/st#{$i}_@1x.png),
+            url(../img/how-to-play/card2-h_desk@1x.png),
+            url(../img/how-to-play/card_desk@1x.png);
+          @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../img/how-to-play/st#{$i}_@2x.png),
+              url(../img/how-to-play/card2-h_desk@1x.png),
+              url(../img/how-to-play/card_desk@1x.png);
+          }
+          transform: translateY(-64px);
+        }
+      } @else {
+        &:nth-child(#{$i}) {
+          background-image: url(../img/how-to-play/st#{$i}_@1x.png),
+            url(../img/how-to-play/card-h_desk@1x.png),
+            url(../img/how-to-play/card_desk@1x.png);
 
-      &:hover {
-        background-position: bottom 95px center, bottom 15px center;
-        background-image: url(../img/how-to-play/st1_@1x.png),
-          url(../img/how-to-play/card-h_desk@1x.png);
+          @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../img/how-to-play/st#{$i}_@1x.png),
+              url(../img/how-to-play/card-h_desk@1x.png),
+              url(../img/how-to-play/card_desk@1x.png);
+          }
+        }
       }
     }
-    &:nth-child(2) {
-      background-image: url(../img/how-to-play/st2_@1x.png),
-        url(../img/how-to-play/card2_desk@1x.png);
-      margin-bottom: 0;
 
-      transition: background-image,
-        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-      &:hover {
-        background-size: 140px 140px, 398px 480px;
-        background-position: bottom 75px center, bottom -2px center;
-        background-image: url(../img/how-to-play/st2_@1x.png),
-          url(../img/how-to-play/card2-h_desk@1x.png);
-      }
-    }
-    &:nth-child(3) {
-      background-image: url(../img/how-to-play/st3_@1x.png),
-        url(../img/how-to-play/card_desk@1x.png);
-      margin-bottom: 0;
-
-      transition: background-image,
-        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-      &:hover {
-        background-position: bottom 95px center, bottom 15px center;
-        background-image: url(../img/how-to-play/st3_@1x.png),
-          url(../img/how-to-play/card-h_desk@1x.png);
-      }
-    }
-    &:nth-child(4) {
-      background-image: url(../img/how-to-play/st4_@1x.png),
-        url(../img/how-to-play/card2_desk@1x.png);
-
-      transition: background-image,
-        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-      &:hover {
-        background-size: 140px 140px, 398px 480px;
-        background-position: bottom 75px center, bottom -2px center;
-        background-image: url(../img/how-to-play/st4_@1x.png),
-          url(../img/how-to-play/card2-h_desk@1x.png);
-      }
-    }
-    &:nth-child(5) {
-      background-image: url(../img/how-to-play/st5_@1x.png),
-        url(../img/how-to-play/card2_desk@1x.png);
-
-      transition: background-image,
-        background-position 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
-
-      &:hover {
-        background-size: 140px 140px, 398px 480px;
-        background-position: bottom 75px center, bottom -2px center;
-        background-image: url(../img/how-to-play/st5_@1x.png),
-          url(../img/how-to-play/card2-h_desk@1x.png);
-      }
-    }
-    &:nth-child(2),
-    &:nth-child(4),
-    &:nth-child(5) {
-      background-size: 140px 140px, 535px 535px;
-      background-position: bottom 75px center, center;
-
-      transform: translateY(-30px);
-    }
-    &:nth-child(1),
-    &:nth-child(3) {
-      transform: translateY(50px);
-    }
-    &:nth-child(4),
-    &:nth-child(5) {
-      transform: translateY(-70px);
+    &:hover,
+    &:focus {
+      background-size: 140px 140px, 100%, contain;
     }
   }
 }
+
 .htp-step {
   text-align: center;
   margin-bottom: 6px;
