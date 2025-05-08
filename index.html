@@ -9,13 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alfa+Slab+One&family=Noto+Sans+Display:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@500&family=Alfa+Slab+One&family=Noto+Sans+Display:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <script type="module" crossorigin src="/stp-8883/commonHelpers3.js"></script>
     <link rel="modulepreload" crossorigin href="/stp-8883/assets/vendor-Btzq3QzQ.js">
     <link rel="stylesheet" crossorigin href="/stp-8883/assets/vendor-pvxkJjp9.css">
-    <link rel="stylesheet" crossorigin href="/stp-8883/assets/styles-BJ4VuJcb.css">
+    <link rel="stylesheet" crossorigin href="/stp-8883/assets/styles-C2AollsK.css">
   </head>
   <body>
     <header class="header" data-header>
@@ -83,21 +83,6 @@
 
 
     <main>
-      <section class="pop-up" data-pop-up>
-  <div class="container">
-    <div class="pop-up-content">
-      <p class="pop-up-text">
-        We use cookies to improve your experience on our website. By browsing
-        this website, you agree to our use of cookies.
-      </p>
-      <div class="pop-up-buttons">
-        <button class="pop-up-btn" data-pop-up-accept>ACCEPT COOKIES</button>
-        <button class="pop-up-btn" data-pop-up-decline>DECLINE COOKIES</button>
-      </div>
-    </div>
-  </div>
-</section>
-
       <section id="hero" class="hero">
   <div class="hero-bg">
     <div class="hero-container">
@@ -133,7 +118,7 @@
     <div class="about-wrap">
     <div class="about-item">
       <p class="about-text">
-        Start your zero to hero adventure! Fight your way through a magnificent
+        Start your zero to hero adventure! Fight your way through a&nbsp;magnificent
         and massive world map by summoning and leveling up your mythic heroes,
         gathering with allies to hunt the legendary BOSS, occupying towers, and
         becoming the strongest one!
@@ -226,7 +211,7 @@
 
       <section class="howtoplay" id="howtoplay">
   <div class="container">
-    <h2 class="setion-title howtoplay-title">How to Play</h2>
+    <h2 class="section-title howtoplay-title">How to Play</h2>
     <ul class="how-to-play-list">
       <li class="how-to-play-item">
         <p class="htp-step">Step 1</p>
@@ -281,7 +266,7 @@
       <section class="preview" id="preview">
   <div class="container">
     <h2 class="preview-title section-title">In-Game Preview</h2>
-    <div class="swiper-container">
+    <div class="swiper-container" id="preview-swiper">
       <ul class="swiper-wrapper">
         <li class="swiper-slide slide-1">
           <picture>
@@ -372,13 +357,13 @@
     </div>
 
     <div class="preview-controls">
-      <button type="button" class="swiper-button-prev">
+      <button type="button" class="swiper-button-prev" id="swiper-button-prev">
         <svg class="preview-button-icon" width="32" height="32">
           <use href="/stp-8883/assets/sprite-COap6z8s.svg#up"></use>
         </svg>
       </button>
-      <div class="swiper-pagination"></div>
-      <button type="button" class="swiper-button-next">
+      <div class="swiper-pagination" id="swiper-pagination"></div>
+      <button type="button" class="swiper-button-next" id="swiper-button-next">
         <svg class="preview-button-icon" width="32" height="32">
           <use href="/stp-8883/assets/sprite-COap6z8s.svg#up"></use>
         </svg>
@@ -900,7 +885,7 @@
   <div class="modal">
     <nav class="navi-modal">
       <ul class="navi-modal-list">
-        <li><a class="navi-modal-link" href="#home">Home</a></li>
+        <li><a class="navi-modal-link" href="#hero">Home</a></li>
         <li><a class="navi-modal-link" href="#about">About the Game</a></li>
         <li><a class="navi-modal-link" href="#features">Game Features</a></li>
         <li><a class="navi-modal-link" href="#howtoplay">How to Play</a></li>
@@ -916,6 +901,21 @@
     </nav>
   </div>
 </section>
+
+    <div class="pop-up" data-pop-up>
+  <div class="container">
+    <div class="pop-up-content">
+      <p class="pop-up-text">
+        We use cookies to improve your experience on our website. By browsing
+        this website, you agree to our use of cookies.
+      </p>
+      <div class="pop-up-buttons">
+        <button class="pop-up-btn" data-pop-up-accept>ACCEPT COOKIES</button>
+        <button class="pop-up-btn" data-pop-up-decline>DECLINE COOKIES</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
   </body>
