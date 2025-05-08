@@ -3,6 +3,16 @@
 
   @include media('desktop') {
     padding: 100px 0;
+
+    background-image: url(../img/preview/blur_desk@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/preview/blur_desk@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 1835px auto;
+    background-position: bottom -540px center;
   }
 }
 .trailer-title {

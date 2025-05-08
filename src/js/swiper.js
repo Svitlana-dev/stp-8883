@@ -6,11 +6,11 @@ import {
   EffectCoverflow,
 } from 'swiper/modules';
 
-new Swiper('.swiper-container', {
+new Swiper('#preview-swiper', {
   modules: [Navigation, Pagination, Keyboard, EffectCoverflow],
   grabCursor: true,
   loop: true,
-  loopedSlides: 5,
+  initialSlide: 0,
   slidesPerView: 'auto',
   centeredSlides: true,
   spaceBetween: window.innerWidth >= 1200 ? -320 : 16,
@@ -27,11 +27,11 @@ new Swiper('.swiper-container', {
     onlyInViewport: true,
   },
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '#swiper-button-next',
+    prevEl: '#swiper-button-prev',
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: '#swiper-pagination',
     clickable: true,
   },
 });

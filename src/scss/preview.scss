@@ -1,3 +1,27 @@
+.preview {
+  background-image: url(../img/preview/blur_mob@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/preview/blur_mob@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 862px auto;
+  background-position: bottom -190px center;
+
+  @include media('desktop') {
+    background-image: url(../img/preview/blur_desk@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/preview/blur_desk@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 1835px auto;
+    background-position: bottom -45px center;
+  }
+}
+
 .preview-title {
   margin-bottom: 10px;
 

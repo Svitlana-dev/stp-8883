@@ -1,14 +1,25 @@
 .reviews {
   padding-top: 40px;
   padding-bottom: 20px;
+
+  background-image: url(../img/preview/blur_mob@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/preview/blur_mob@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 862px auto;
+  background-position: top -230px center;
+
   @include media('desktop') {
     padding-top: 35px;
     padding-bottom: 50px;
 
     background-image: url(../img/reviews/blur-bg_desk@1x.png);
     background-repeat: no-repeat;
-    background-size: 1357px auto;
-    background-position: bottom -72px center;
+    background-size: 1835px auto;
+    background-position: bottom -300px center;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
