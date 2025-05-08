@@ -1,0 +1,300 @@
+.features {
+  padding-bottom: 35px;
+  @include media('desktop') {
+    padding-top: 50px;
+    padding-bottom: 95px;
+
+    background-image: url(../img/features/woman-desktop@1x.png),
+      url(../img/faq/bg-elipse_@1x.png), url(../img/features/vector@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/woman-desktop@2x.png),
+        url(../img/faq/bg-elipse_@1x.png), url(../img/features/vector@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 389px auto, 525px auto, 1500px auto;
+    background-position: top 92px right calc(((100% - 1200px) / 2) + 200px),
+      bottom -17px right calc(((100% - 1200px) / 2) + 200px), top -325px center;
+  }
+}
+.features-container {
+  background-image: url(../img/features/woman-mobile@1x.png);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/features/woman-mobile@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: 282px auto;
+  background-position: top 25px center;
+
+  @include media('desktop') {
+    background: none;
+  }
+}
+
+.features-title {
+  font-family: 'Alfa Slab One', sans-serif;
+  font-size: 24px;
+  margin-bottom: 246px;
+  @include media('desktop') {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+}
+
+.features-list {
+  filter: drop-shadow(0 4px 20px rgba(242, 123, 4, 0.48));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  @include media('desktop') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 836px;
+    column-gap: 20px;
+    row-gap: 25px;
+  }
+}
+
+// @include media('desktop') {
+//   .features-text {
+//     // padding-top: 120px; // достатньо, щоб текст опинився під іконкою
+//     font-size: 16px;
+//     line-height: 1.5;
+//   }
+// }
+
+.features-item {
+  min-height: 258px;
+  width: 288px;
+  padding-top: 136px;
+  padding-bottom: 14px;
+  padding-inline: 16px;
+  background-size: 96px 96px, contain;
+  background-position: center top 20px, center;
+  background-repeat: no-repeat;
+
+  &:nth-child(1) {
+    background-image: url(../img/features/warrior@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(2) {
+    background-image: url(../img/features/ninja@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(3) {
+    background-image: url(../img/features/map@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(4) {
+    background-image: url(../img/features/mage@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(5) {
+    background-image: url(../img/features/leaderboard@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+  &:nth-child(6) {
+    background-image: url(../img/features/voice@1x.png),
+      url(../img/features/item-mobile@1x.png);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../img/features/item-mobile@2x.png);
+
+    &:nth-child(1) {
+      background-image: url(../img/features/warrior@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(2) {
+      background-image: url(../img/features/ninja@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(3) {
+      background-image: url(../img/features/map@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(4) {
+      background-image: url(../img/features/mage@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(5) {
+      background-image: url(../img/features/leaderboard@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+    &:nth-child(6) {
+      background-image: url(../img/features/voice@2x.png),
+        url(../img/features/item-mobile@2x.png);
+    }
+  }
+
+  @include media('desktop') {
+    padding-top: 136px;
+    padding-inline: 20px;
+    padding-bottom: 20px;
+    width: 360px;
+    min-height: 237px;
+    background-size: 96px 96px, contain;
+    background-position: center top 20px, center;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s ease, background-size 0.3s ease,
+      background-position 0.3s ease;
+
+    &:nth-child(1) {
+      background-image: url(../img/features/warrior@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/warrior@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: url(../img/features/ninja@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/ninja@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-left: 96px;
+      background-image: url(../img/features/map@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/map@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    &:nth-child(4) {
+      background-image: url(../img/features/mage@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/mage@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    &:nth-child(5) {
+      background-image: url(../img/features/leaderboard@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/leaderboard@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    &:nth-child(6) {
+      background-image: url(../img/features/voice@1x.png),
+        url(../img/features/item-desktop@1x.png);
+
+      &:hover {
+        background-image: url(../img/features/voice@1x.png),
+          url(../img/features/item-hover@1x.png);
+        background-position: top 4px center, center;
+        background-size: 125px 125px, contain;
+      }
+    }
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/item-desktop@2x.png);
+
+      &:nth-child(1) {
+        background-image: url(../img/features/warrior@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/warrior@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url(../img/features/ninja@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/ninja@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+
+      &:nth-child(3) {
+        background-image: url(../img/features/map@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/map@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url(../img/features/mage@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/mage@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+
+      &:nth-child(5) {
+        background-image: url(../img/features/leaderboard@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/leaderboard@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+
+      &:nth-child(6) {
+        background-image: url(../img/features/voice@2x.png),
+          url(../img/features/item-desktop@2x.png);
+
+        &:hover {
+          background-image: url(../img/features/voice@2x.png),
+            url(../img/features/item-hover@2x.png);
+          background-position: top 4px center, center;
+          background-size: 125px 125px, contain;
+        }
+      }
+    }
+  }
+}

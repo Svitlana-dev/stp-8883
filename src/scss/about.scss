@@ -1,10 +1,18 @@
 .about {
-  margin-bottom: 20px;
-  scroll-margin-top: 48px;
+  padding-bottom: 40px;
 
   @include media('desktop') {
-    margin-bottom: 50px;
-    scroll-margin-top: 80px;
+    padding-bottom: 50px;
+
+    background-image: url(../img/features/vector@1x.png);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../img/features/vector@2x.png);
+    }
+    background-repeat: no-repeat;
+    background-size: 1500px auto;
+    background-position: bottom -430px center;
   }
 }
 
