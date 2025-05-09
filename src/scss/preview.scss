@@ -140,3 +140,10 @@
   width: 20px;
   height: 6px;
 }
+
+@include media('desktop') {
+  .preview-img {
+    width: 680px;
+    height: 380px;
+  }
+}
